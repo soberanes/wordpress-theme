@@ -1,0 +1,616 @@
+/*   
+Theme Name: Almeida Mireles
+Theme URI: http://www.almeida-mireles.com/
+Description: A HTML5-based WordPress theme for custom project.
+Author: Paul Soberanes
+Author URI: http://www.paulsoberanes.com
+Version: 2.0
+*/
+@font-face {
+    font-family: 'DidotLTStdOrnaments';
+    src: url('fonts/canada_type/canada_type_-_didotdisplay-webfont.eot');
+    src: url('fonts/canada_type/canada_type_-_didotdisplay-webfont.eot') format('embedded-opentype'),
+         url('fonts/canada_type/canada_type_-_didotdisplay-webfont.woff') format('woff'),
+         url('fonts/canada_type/canada_type_-_didotdisplay-webfont.ttf') format('truetype'),
+         url('fonts/canada_type/canada_type_-_didotdisplay-webfont.svg#DidotLTStdOrnaments') format('svg');
+}
+@font-face {
+    font-family: 'TheanoDidotRegular';
+    src: url('fonts/theanodidot/theanodidot-regular.eot');
+    src: url('fonts/theanodidot/theanodidot-regular.eot') format('embedded-opentype'),
+         url('fonts/theanodidot/theanodidot-regular.woff') format('woff'),
+         url('fonts/theanodidot/theanodidot-regular.ttf') format('truetype'),
+         url('fonts/theanodidot/theanodidot-regular.svg#TheanoDidotRegular') format('svg');
+}
+@font-face {
+	font-family: 'helvetica-neue';
+	src: url('fonts/helvetica/helvetica-neue-light.eot');
+	src: url('fonts/helvetica/helvetica-neue-light.woff') format('woff'), 
+	url('fonts/helvetica/helvetica-neue-light.ttf') format('truetype'), 
+	url('fonts/helvetica/helvetica-neue-light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.clearfix{
+	clear: both;
+}
+#introduction{
+	background-size: cover;
+	display: block;
+  	position: fixed;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+  	height: 100%;
+  	z-index: 10;
+  	border: 10px solid #FFFFFF;
+}
+#introduction #redirect{
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-75px 0 0 -135px;
+}
+#introduction .redirect{
+	padding: 0px;
+	float: left;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+#introduction .redirect .logo{
+	background: url('images/logo_front.png') no-repeat;
+	box-shadow: 0px 0px 15px #888;
+	width: 384px;
+	height: 110px;
+}
+#introduction .image_day{
+	background: url('images/front_title.png') center center no-repeat;
+	color: #111;
+	font-family: 'TheanoDidotRegular';
+	width: 206px;
+	height: 46px;
+	clear: both;
+	text-align: center;
+	padding: 13px;
+	font-style: italic;
+	margin: 20px auto;
+	cursor: pointer;
+	opacity: .7;
+}
+#introduction #image_day_content{
+	display: none;
+	font-family: 'TheanoDidotRegular';
+	width: 215px;
+	clear: both;
+	text-align: center;
+	font-style: italic;
+	margin: 20px auto;
+	cursor: pointer;
+}
+#introduction .image_day_data{
+	background: url('images/front_description.png') center center no-repeat;
+	height: 72px;
+	cursor: auto;
+	padding: 10px;
+	opacity: .7;
+	margin-bottom: 20px;
+}
+#introduction .image_day_data p{
+	margin: 0;
+	font-size: 11px;
+}
+#introduction .image_day_data .img_title{
+	font-family: 'helvetica';
+	font-style: normal;
+	font-weight: lighter;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+#introduction .image_day_data .img_author{
+	text-decoration: none;
+	color: #111;
+}
+#introduction .image_day_data .img_author:hover{
+	color: #888;
+}
+#introduction .cam_icon{
+	background: url('images/cam_icon.png') no-repeat;
+	padding: 11px 14px;
+	clear: both;
+	margin: 20% auto;
+}
+h1{
+	font-family: 'Raleway';
+	color: #277553;
+	font-size: 10em;
+	width: 1000px;
+	margin: 10% auto;
+	text-align: center;
+}
+#content{
+	font-family: 'Raleway';
+	color: #FFFFFF;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	width: 1904px;
+	overflow: hidden !important;
+	margin: 0px auto;
+}
+#content .texto{
+	font-size: 10em;
+	width: 1000px;
+	margin: 10% auto;
+	text-align: center;
+}
+#content a{
+	text-decoration: none;
+	color: orange;
+	font-size: 0.8em;
+}
+#primary{
+	visibility: hidden;
+}
+
+/* Terms */
+.term_136x96{
+	width: 136px !important;
+	height: 96px !important;
+}
+.term_136x192{
+	width: 136px !important;
+	height: 192px !important;
+}
+.term_272x192{
+	width: 272px !important;
+	height: 192px !important;
+}
+
+/* Elements */
+.post{
+	background-size: cover !important;
+}
+.item {
+	z-index: 2;
+}
+.item:hover{
+	opacity: .8;
+}
+
+/* Sidebar */
+#navigation{
+	position: fixed;
+	bottom: 0px;
+	z-index: 5;
+	background: #FFFFFF;
+	width: 100%;
+	height: 32px;
+}
+#navigation .base_menu{
+	width: 375px;
+	height: 30px;
+	background: #FFFFFF;
+	margin: 0 auto;
+	position: relative;
+	bottom: 80px;
+	padding: 40px;
+}
+#navigation .base_menu .pull{
+	background: url('images/up.png') #FFFFFF no-repeat;
+	background-position: 0px 10px;
+	width: 51px;
+	height: 19px;
+	margin: 0 auto -5px;
+	position: relative;
+	bottom: 74%;
+	left: 0px;
+	cursor: pointer;
+	z-index: 5;
+}
+#navigation .base_menu .push{
+	margin: 0 auto -5px;
+	position: relative;
+	bottom: -10px;
+	left: 166px;
+	cursor: pointer;
+	z-index: 5;
+	padding: 6px 26px;
+}
+#navigation .base_menu .content_menu{
+	background: url('images/menu_bg.png') no-repeat;
+	width: 380px;
+	height: 340px;
+	position: absolute;
+	bottom: -236px;
+	margin: 0 auto;
+	right: 0px;
+	opacity: 0;
+	display: block;
+}
+#navigation .base_menu .logo{
+	background: url('images/logo_almeida.png') no-repeat;
+	width: 302px;
+	height: 62px;
+	vertical-align: top;
+	position: relative;
+	bottom: 25%;
+	box-shadow: 0px 0px 15px #888;
+	cursor: pointer;
+}
+#navigation .base_menu .content_menu .categories{
+	font-family: 'TheanoDidotRegular';
+	padding-top: 70px;
+	font-style: italic;
+}
+#navigation .base_menu .content_menu .categories ul li{
+	list-style: none;
+	font-family: 'TheanoDidotRegular';
+	font-size: 16px;
+	font-style: italic;
+}
+#navigation .base_menu .content_menu .categories ul li a{
+	text-decoration: none;
+	color: #888;
+}
+#navigation .base_menu .content_menu .categories ul li a:hover{
+	color: #111;
+}
+#navigation .base_menu .content_menu .categories .menu_items{
+	width: 180px;
+	margin-left: 80px;
+	margin-bottom: 30px;
+	text-align: center;
+	display: inline-block;
+	opacity: 0;
+}
+#navigation .base_menu .content_menu .categories .menu_items_childs{
+	width: 180px;
+	text-align: center;
+	vertical-align: top;
+	display: none;
+	margin-left: -50px;
+}
+#navigation .base_menu .content_menu .categories .separator{
+	border-top: 1px solid black;
+	width: 20px;
+	height: 5px;
+	position: absolute;
+	left: 48%;
+}
+
+#navigation .base_menu .content_menu .categories .login{
+	width: 340px;
+	text-align: center;
+	margin-top: 10px;
+}
+#navigation .base_menu .content_menu .categories .login a#login_link{
+	background: url('images/login_link.png') no-repeat;
+	padding: 11px 7px;
+	width: 14px;
+	position: absolute;
+	left: 48.7%;
+	z-index: 7;
+}
+#navigation .base_menu .content_menu .categories .login #user_logged{
+	display: none;
+}
+#navigation .base_menu .content_menu .categories .login a#author_link{
+	background: url('images/author.png') no-repeat;
+	padding: 0px 12px;
+	width: 14px;
+	z-index: 7;
+}
+#navigation .base_menu .content_menu .categories .login a#fav_link{
+	background: url('images/favorites.png') no-repeat;
+	padding: 0px 10px;
+	width: 20px;
+	z-index: 7;
+}
+#navigation #post_button{
+	width: 45px;
+	height: 45px;
+	background: whitesmoke;
+	opacity: .1;
+	position: absolute;
+	top: 35px;
+	left: 168px;
+	cursor: pointer;
+}
+.mfp-login .login_frame{
+	border: 1px solid #868686;
+	padding: 10px;
+	width: 321px;
+	margin: 0 auto;
+}
+.mfp-login .login_content{
+	background: #FFFFFF !important;
+	width: 300px;
+	height: 365px;
+	padding: 40px;
+	margin: 0 auto;
+	text-align: center;
+}
+.mfp-login .mfp-close{
+	right: 127px !important;
+}
+.mfp-login #login-facebook{
+	background: url('images/login_facebook.png') center center no-repeat;
+	height: 40px;
+	border: none;
+	margin: 0 auto;
+	padding: 12px 100px;
+	cursor: pointer;
+	display: block;
+}
+.mfp-login #login-twitter{
+	background: url('images/login_twitter.png') center center no-repeat;
+	height: 40px;
+	border: none;
+	margin: 0 auto;
+	padding: 12px 100px;
+	cursor: pointer;
+	display: block;
+}
+.mfp-login #login-mail{
+	background: url('images/login_mail.png') center center no-repeat;
+	width: 199px;
+	height: 40px;
+	border: none;
+	margin: 0 auto 35px;
+	padding: 0px;
+	cursor: pointer;
+}
+.mfp-login .login_title{
+	font-family: 'TheanoDidotRegular';
+	font-style: italic;
+	font-size: 17px;
+}
+.mfp-login .login_title .login_anchor{
+	text-decoration: underline;
+	font-size: 14px;
+	cursor: pointer;
+}
+.mfp-login input[type="text"], input[type="password"]{
+	padding: 10px;
+	width: 200px;
+	text-align: center;
+	font-size: 14px;
+}
+.mfp-login .login_title span{
+	font-style: normal;
+}
+#menswear_ul{
+	display: none;
+}
+#art-design_ul{
+	display: none;
+}
+#architecture_ul{
+	display: none;
+}
+#photography_ul{
+	display: none;
+}
+
+#page_about{
+	background: url('images/about_bg.png') no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: block;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+#page_about #content_about{
+	background: url('images/about_frame.png') no-repeat;
+	width: 711px;
+	height: 458px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-230px 0 0 -355px;
+}
+
+#page_about #content_about #text_about{
+	font-family: 'TheanoDidotRegular';
+	font-size: 14px;
+	font-style: italic;
+	text-align: center;
+	width: 490px;
+	padding: inherit;
+	margin: 150px auto 100px;
+	line-height: 1.3em;
+}
+#page_about #content_about #logo_about{
+	background: url('images/logo_about.png') center no-repeat;
+	padding: 13px 118px;
+	margin: 0 auto;
+	position: relative;
+	left: 33%;
+}
+/** Class for post popup **/
+.white-popup {
+	position: relative;
+	background: transparent;
+	width: 600px;
+	height: 600px;
+	margin: 4% auto;
+}
+.mfp-close{
+	background: url('images/mfp_close.png') center no-repeat !important;
+	text-indent: -666em;
+	width: 28px !important;
+	height: 28px !important;
+	right: -11px !important;
+	top: -14px !important;
+}
+
+.white-popup-social {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: 380px;
+  height: 120px;
+  margin: 20px auto;
+}
+
+.img_container{
+	background: url('images/mfp_bg.png') center no-repeat !important;
+	padding-top: 1px;
+	margin: 0 auto;
+	text-align: center;
+}
+.img_container .img{
+	border: 19px solid #FFFFFF;
+	background-size: cover !important;
+	margin: 8px auto;
+}
+.article_text{
+	background: url('images/mfp_information.png') no-repeat;
+	width: 326px;
+	height: 113px;
+	margin: 20px auto;
+	text-align: center;
+	padding: 20px;
+	font-family: 'TheanoDidotRegular';
+	text-transform: capitalize;
+}
+.article_text h3{
+	padding: 0;
+	margin: 0;
+	font-size: 20px;
+	font-weight: bolder;
+	text-transform: capitalize;
+}
+.article_text .left {
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
+	padding: 5px;
+}
+.article_text p{
+	margin: 0;
+	padding: 0;
+}
+.article_text .left .details{
+	line-height: 1em;
+}
+div.tag{
+	background: url('images/tag.png') no-repeat;
+	height: 57px;
+	width: 20px;
+	position: absolute;
+	right: 15px;
+	margin-top: -35px;
+}
+div.social_button{
+	left: -6%;
+	top: 9%;
+	width: 117px;
+	height: 85px;
+	z-index: 12;
+	margin: 0 auto;
+}
+div.social_button div{
+	width: 26px;
+	height: 26px;
+	cursor: pointer;
+	display: inline-block;
+}
+div.social_button .like{
+	background: url('images/like.png') no-repeat;
+	width: 48px;
+	height: 48px;
+	margin: 0 auto -10px;
+	cursor: pointer;
+	display: none;
+}
+div.social_button .pinterest{
+	background: url('images/pinterest.png');
+}
+div.social_button .facebook{
+	background: url('images/facebook.png');
+}
+div.social_button .twitter{
+	background: url('images/twitter.png');
+}
+div.social_button .mail{
+	background: url('images/mail.png');
+}
+
+/** Primer diseño de entrada **/
+.first-style .img{
+	width: 580px;
+	height: 317px;
+}
+.first-style .article_text{
+
+}
+.first-style .article_text .descripcion{
+	float: right;
+	font-size: 12px;
+	position: relative;
+	width: 395px;
+	padding: 0 10px;
+}
+
+/** Segundo diseño de entrada **/
+.second-style .img_container{
+	background: url('images/mfp_bg2.png') center no-repeat !important;
+	display: inline-block;
+	width: 335px;
+}
+.second-style .img_details{
+	display: inline-block;
+	position: absolute;
+	right: -80px;
+	top: 80px;
+}
+.second-style .img{
+	height: 580px;
+	width: 317px;
+}
+.second-style div.social_button{
+	clear: both;
+}
+.second-style div.tag{
+	left: -55px;
+	bottom: -325px;
+}
+.second-style .mfp-close{
+	left: 320px;
+}
+
+@media screen and (max-width:1920px) {
+	#content{ width: 1768px; }
+}
+@media screen and (max-width: 1790px){
+	#content{ width: 1632px; }
+}
+@media screen and (max-width: 1670px){
+	#content{ width: 1496px; }
+}
+@media screen and (max-width: 1530px){
+	#content{ width: 1360px; }
+}
+@media screen and (max-width: 1380px){
+	#content{ width: 1224px; }
+}
+@media screen and (max-width: 1240px){
+	#content{ width: 1088px; }
+}
+@media screen and (max-width: 1099px){
+	#content{ width: 952px; }
+}
+@media screen and (max-width: 965px){
+	#content{ width: 816px; }
+}
+@media screen and (max-width: 825px){
+	#content{ width: 680px; }
+}
+
+
